@@ -2,11 +2,29 @@ from model.ssa import *
 from data.load import *
 import numpy as np
 
-x = np.arange(0, 100, 1)
 
-model = SSA(10, 1, 1)
+
+path = "data/WHO-COVID-19-global-data.csv"
+country = "China"
+L = 30
+stride = 1
+tao = 7
+
+
+#!
+data_dict = read_data(path, country)
+x = np.log(data_dict["New_cases"]+1)
+
+#!
+plot_series(x)
+
+#!
+model = SSA(L, stride, tao)
 model.embedding(x)
 model.decomposition()
+model.grouping()
+model.reconstruction()
 
-print(model.phase_space)
-print(np.sum(model.component, axis=0) - model.phase_space)
+
+plot_series_array(model.components_series)
+plot_series(np.sum(model.components_series, axis=0))
