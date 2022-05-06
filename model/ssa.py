@@ -43,6 +43,11 @@ class SSA:
             assert "Please take embedding first."
         S = self.phase_space @ self.phase_space.T
         Lambda, U = np.linalg.eig(S)
+        #! 排序
+        sorted_index = np.argsort(Lambda)[::-1]
+        Lambda = Lambda[sorted_index]
+        U = U[:, sorted_index]
+        #!
         V = self.phase_space.T @ U / np.sqrt(Lambda)
         self.components_array = np.zeros((len(Lambda), self.L, self.K))
         for i in range(len(Lambda)):
