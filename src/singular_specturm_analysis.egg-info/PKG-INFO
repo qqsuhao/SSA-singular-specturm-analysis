@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: singular-specturm-analysis
+Version: 0.0.1.1
+Summary: singular specturm analysis
+Home-page: https://github.com/qqsuhao/SSA-singular-specturm-analysis
+Author: Su Hao
+Author-email: qq7835144@outlook.com
+Project-URL: Bug Tracker, https://github.com/qqsuhao/SSA-singular-specturm-analysis/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE

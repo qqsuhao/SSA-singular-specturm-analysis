@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+setup.cfg
+src/singular_specturm_analysis.egg-info/PKG-INFO
+src/singular_specturm_analysis.egg-info/SOURCES.txt
+src/singular_specturm_analysis.egg-info/dependency_links.txt
+src/singular_specturm_analysis.egg-info/top_level.txt
+src/ssa/__init__.py
+src/ssa/ssa.py
+src/ssa/utils.py
